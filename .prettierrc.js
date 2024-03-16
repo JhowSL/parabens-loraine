@@ -35,5 +35,13 @@ module.exports = {
         singleQuote: true,
       },
     },
+    {
+      files: '*.md',
+      options: {
+        tabWidth: 2,
+        printWidth: 80,
+        proseWrap: 'always',
+      },
+    },
   ],
 }
