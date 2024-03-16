@@ -1,17 +1,36 @@
 {
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "parser": "@typescript-eslint/parser",
   "extends": [
-    "next",
-    "next/core-web-vitals",
+    "eslint:recommended",
     "plugin:react/recommended",
-    "plugin:react-hooks/recommended",
-    "prettier"
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "next"
   ],
-  "plugins": ["prettier"],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "plugins": [
+    "react",
+    "@typescript-eslint",
+    "prettier",
+    "eslint-plugin-prettier"
+  ],
   "rules": {
-    "prettier/prettier": "error",
-    "react/react-in-jsx-scope": "off",
-    "react/prop-types": "off",
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn"
+    "prettier/prettier": "error"
   }
 }
