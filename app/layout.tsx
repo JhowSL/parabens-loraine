@@ -1,17 +1,21 @@
-import { AppRouterCacheProvider, ThemeProvider } from './components/ui/MUI'
+import {
+  AppRouterCacheProvider,
+  CssBaseline,
+  ThemeProvider,
+} from './components/ui/MUI'
 import { theme } from './context'
 import React from 'react'
 
-interface RootLayoutProps {
-  children: React.ReactNode
-}
-
-export default function RootLayout(props: RootLayoutProps): React.ReactElement {
+export default function RootLayout(props: { children: React.ReactNode }) {
   return (
-    <html lang="pt-Br">
+    <html lang="en">
       <body>
-        <AppRouterCacheProvider>
-          <ThemeProvider theme={theme}>{props.children}</ThemeProvider>
+        <AppRouterCacheProvider options={{ enableCssLayer: true }}>
+          <ThemeProvider theme={theme}>
+            {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+            <CssBaseline />
+            {props.children}
+          </ThemeProvider>
         </AppRouterCacheProvider>
       </body>
     </html>

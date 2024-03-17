@@ -1,8 +1,8 @@
-import { Copyright, ProTip } from './components/feature'
-import { Box, Container, Link, Typography } from './components/ui/MUI'
+import { Copyright, ProTip } from '@/components/feature'
+import { Box, Button, Container, Typography } from '@/components/ui/MUI'
 import NextLink from 'next/link'
 
-export default function Home() {
+export default function About() {
   return (
     <Container maxWidth="lg">
       <Box
@@ -15,11 +15,13 @@ export default function Home() {
         }}
       >
         <Typography variant="h4" component="h1" sx={{ mb: 2 }}>
-          Material UI - Next.js App Router example in TypeScript
+          Material UI - Next.js example in TypeScript
         </Typography>
-        <Link href="/about" color="secondary" component={NextLink}>
-          Go to the about page
-        </Link>
+        <Box sx={{ maxWidth: 'sm' }}>
+          <Button variant="contained" component={NextLink} href="/">
+            Go to the home page
+          </Button>
+        </Box>
         <ProTip />
         <Copyright />
       </Box>
