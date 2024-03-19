@@ -1,10 +1,22 @@
 import { ImagemCapa } from '@/imagens'
-import { Box, Card, CardContent, Grid, Typography, CardMedia } from '@/ui'
+import {
+  Box,
+  Card,
+  CardContent,
+  Grid,
+  IconButton,
+  NavigateNextIcon,
+  Typography,
+} from '@/ui'
 import { Alegreya } from 'next/font/google'
 import React from 'react'
 
-const alegreya = Alegreya({
+const alegreya700 = Alegreya({
   weight: '700',
+  subsets: ['latin'],
+})
+const alegreya400 = Alegreya({
+  weight: '400',
   subsets: ['latin'],
 })
 
@@ -14,15 +26,35 @@ const Capa = (
       <Grid container justifyContent="center" alignItems="center">
         <ImagemCapa />
       </Grid>
-      <Grid container wrap="nowrap" spacing={2}>
-        <Grid item xs>
+      <Grid container wrap="wrap" spacing={1} paddingTop={2}>
+        <Grid
+          item
+          xs={15}
+          md={20}
+          container
+          justifyContent="center"
+          alignItems="center"
+        >
           <Typography
-            className={`${alegreya.className} text-light-textPrimary`}
+            className={`${alegreya700.className} text-light-textPrimary`}
+            variant="h5"
           >
-            <Grid container justifyContent="center" alignItems="center">
-              {' '}
-              Wingrid Loraine Alvez Muniz
-            </Grid>
+            Wingrid Loraine Alvez Muniz
+          </Typography>
+        </Grid>
+        <Grid
+          item
+          xs={20}
+          md={20}
+          container
+          justifyContent="center"
+          alignItems="center"
+        >
+          <Typography
+            className={`${alegreya400.className} text-light-textSecondary`}
+            variant="subtitle2"
+          >
+            Uma pequena história de uma grande mulher...
           </Typography>
         </Grid>
       </Grid>
@@ -33,6 +65,31 @@ export default function CapaCard(): JSX.Element {
   return (
     <Box>
       <Card>{Capa}</Card>
+      <Grid
+        container
+        position={'relative'}
+        top={'50px'}
+        direction="row"
+        justifyContent="space-between"
+        alignItems="center"
+      >
+        <IconButton
+          className={`
+          btn`}
+          disabled={true}
+        >
+          01
+        </IconButton>
+        <IconButton
+          className={`
+          btn`}
+          disabled={false}
+          size="large"
+          href="/introduction"
+        >
+          <NavigateNextIcon fontSize="inherit" />
+        </IconButton>
+      </Grid>
     </Box>
   )
 }

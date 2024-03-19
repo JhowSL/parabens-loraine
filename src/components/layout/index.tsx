@@ -1,3 +1,5 @@
+import Footer from './footer'
+import Header from './header'
 import { Box, Container } from '@/ui'
 import { ReactNode } from 'react'
 
@@ -12,11 +14,11 @@ const Layout = ({ children }: LayoutProps) => {
         <Box
           sx={{
             bgcolor: 'backgroundColor',
-            position: 'relative',
-            top: '30vh',
           }}
         >
+          <Header />
           <main>{children}</main>
+          <Footer />
         </Box>
       </>
     </Container>
