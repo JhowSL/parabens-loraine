@@ -1,4 +1,4 @@
-import BirthdayMessage from './mensagem'
+import BirthdayMessage from './message'
 import React from 'react'
 
 const indexPage = (): JSX.Element => {

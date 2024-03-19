@@ -1,4 +1,4 @@
-import CapaCard from '@/features/pages/capa'
+import { CapaCard } from '@/features'
 import { Box } from '@/ui'
 
 export default function BirthdayMessage(): JSX.Element {

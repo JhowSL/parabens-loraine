@@ -16,38 +16,33 @@ const alegreya400 = Alegreya({
   subsets: ['latin'],
 })
 
-const Introduction = (
+const Page4 = (
   <React.Fragment>
     <CardContent className={'form-field'}>
       <Grid
         container
         wrap="nowrap"
-        spacing={2}
-        padding={5}
-        paddingTop={'4vh'}
-        paddingBottom={'4vh'}
+        spacing={6}
+        padding={4}
+        paddingTop={'28vh'}
+        paddingBottom={'24vh'}
       >
         <Grid item xs>
           <Typography
-            className={`${alegreya400.className} text-light-textSecondary`}
-            variant="overline"
+            className={`${alegreya400.className} text-light-textPrimary`}
+            variant="h3"
           >
-            É 21 da Loraine e eu tentei fazer algo diferente sem ajuda do GPT.
-            queria fazer algo criativo e autêntico né, e aqui só uma pequena
-            introdução de uma pequena história do que eu quero contar e eu
-            espero que você goste é confesso que eu estou um pouco nervoso sim
-            fazendo isso, mas tentei trazer um pouco do que eu amo de uma forma
-            que fique divertida então vamos lá...
+            Sobre ela.........
           </Typography>
         </Grid>
       </Grid>
     </CardContent>
   </React.Fragment>
 )
-export default function IntroductionCard(): JSX.Element {
+export default function Page4Card(): JSX.Element {
   return (
     <Box>
-      <Card>{Introduction}</Card>
+      <Card>{Page4}</Card>
       <Grid
         container
         position={'relative'}
@@ -62,7 +57,7 @@ export default function IntroductionCard(): JSX.Element {
           btn`}
             disabled={false}
             size="large"
-            href="/"
+            href="/chapter1/page3"
           >
             <NavigateBeforeIcon fontSize="inherit" />
           </IconButton>
@@ -71,14 +66,14 @@ export default function IntroductionCard(): JSX.Element {
           btn`}
             disabled={true}
           >
-            02
+            04
           </IconButton>
           <IconButton
             className={`
           btn`}
-            disabled={false}
+            disabled={true}
             size="large"
-            href="/chapter1/page3"
+            href="/"
           >
             <NavigateNextIcon fontSize="inherit" />
           </IconButton>
